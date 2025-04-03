@@ -7,8 +7,12 @@
 
 // 3 CONSEGNA: PARTI DA CONSEGNA 2 E TORNA A CONSEGNA 1 (DECOMPRIMI STRINGA)
 
+// let initialString = "pprrroooovvvvvaaaaaavvvvvoooorrrpp";
+let initialString = prompt("Inserisci una parola o una frase ripetendo tante volte ciascuna lettera", "pprrroooovvvvvaaaaaavvvvvoooorrrpp");
 
-let initialString = "pprrroooovvvvvaaaaaavvvvvoooorrrpp";
+
+
+
 let compressedString = "";
 for (let i = 0; i < initialString.length; i++) {
     const currentLetter = initialString[i];
@@ -50,3 +54,4 @@ for (let i = 0; i < compressedStringWithLetterCount.length; i = i + 2) {
     newStringFromLetterCount += currentLetter.repeat(letterOccurrences);
 }
 console.info("3) newStringFromLetterCount:", newStringFromLetterCount);
+console.info("3) TEST UGUAGLIANZA CON STRINGA INIZIALE:", newStringFromLetterCount === initialString);
