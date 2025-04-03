@@ -59,7 +59,6 @@ for (i = 0; i < teachers.length; i ++) {
   //   teachers.splice(i, 1);
   // }
   // * INVECE DI USARE SPLICE RISOLVERE SPOSTANDOLO COME PRIMO/ULTIMO E USANDO POP O SHIFT, ALTRIMENTI TANTO VALE USARE SPLICE COME SOTTO
-  // * TODO?: VEDERE ANCHE CON SORT()
   if (currentTeacher == "Ed") {
     for (let j = i; j <= teachers.length - 1; j ++) {
       teachers[i] = teachers[i - 1]
