@@ -53,24 +53,33 @@ console.log("2: longNames", longNames)
 
 
 // 3. Rimuovi 'Ed' dall'array teachers
-// for (i = 0; i < teachers.length; i ++) {
-//   const currentTeacher = teachers[i];
-// * TODO: INVECE DI USARE SPLICE RISOLVERE SPOSTANDOLO COME PRIMO/ULTIMO E USANDO POP O SHIFT, ALTRIMENTI TANTO VALE USARE SPLICE COME SOTTO
-//   if (currentTeacher == "Ed") {
-//     teachers.splice(i, 1);
-//   }
-// }
-// console.log("3: Controllo rimozione di Ed", teachers.includes("Ed"));
-// * FATTO CON METODO SPLICE E CONTROLLANDO PRESENZA DEL NOME COME DETTO DA SAMUEL
-const nameToRemove = "Ed"
-if (teachers.indexOf(nameToRemove) !== - 1) {
-  teachers.splice(teachers.indexOf(nameToRemove), 1);
-} else {
-  console.warn(`${nameToRemove} non è presente nell'array`)
+for (i = 0; i < teachers.length; i ++) {
+  const currentTeacher = teachers[i];
+  // if (currentTeacher == "Ed") {
+  //   teachers.splice(i, 1);
+  // }
+  // * INVECE DI USARE SPLICE RISOLVERE SPOSTANDOLO COME PRIMO/ULTIMO E USANDO POP O SHIFT, ALTRIMENTI TANTO VALE USARE SPLICE COME SOTTO
+  // * TODO?: VEDERE ANCHE CON SORT()
+  if (currentTeacher == "Ed") {
+    for (let j = i; j <= teachers.length - 1; j ++) {
+      teachers[i] = teachers[i - 1]
+    }
+    teachers.shift()
+  }
 }
 // * DEBUG
 // * console.table(teachers)
-console.log("3: Controllo presenza di Ed", teachers.includes(nameToRemove));
+console.log("3: Controllo presenza di Ed", teachers.includes("Ed"));
+// * FATTO CON METODO SPLICE E CONTROLLANDO PRESENZA DEL NOME COME DETTO DA SAMUEL
+// const nameToRemove = "Ed"
+// if (teachers.indexOf(nameToRemove) !== - 1) {
+//   teachers.splice(teachers.indexOf(nameToRemove), 1);
+// } else {
+//   console.warn(`${nameToRemove} non è presente nell'array`)
+// }
+// console.log("3: Controllo presenza di Ed", teachers.includes(nameToRemove));
+// * DEBUG
+// * console.table(teachers)
 
 
 
