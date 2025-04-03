@@ -11,6 +11,7 @@ console.table(teachers)
 
 // 1. Inverti l'ordine degli insegnanti nell'array teachers
 // e salva il risultato nella variabile reversedTeachers
+// * TODO: PROVARE AD USARE REVERSE() (PER NON MODIFICARE ARRAY ORIGINALE CLONARLO LAVORARE SU CLONE)
 const reversedTeachers = [];
 for (i = 0; i < teachers.length; i ++) {
   const currentTeacher = teachers[i];
@@ -32,14 +33,13 @@ console.log("longNames", longNames)
 // 3. Rimuovi 'Ed' dall'array teachers
 // for (i = 0; i < teachers.length; i ++) {
 //   const currentTeacher = teachers[i];
-//   // * TODO: INVECE DI USARE SPLICE RISOLVERE SPOSTANDOLO COME PRIMO/ULTIMO E USANDO POP O SHIFT
+// * TODO: INVECE DI USARE SPLICE RISOLVERE SPOSTANDOLO COME PRIMO/ULTIMO E USANDO POP O SHIFT, ALTRIMENTI TANTO VALE USARE SPLICE COME SOTTO
 //   if (currentTeacher == "Ed") {
 //     teachers.splice(i, 1);
 //   }
 // }
 // console.log("Controllo rimozione di Ed", teachers.includes("Ed"));
-// * FATTO CON METODO SPLICE
-// @ todo controllare presenza del nome, es: "Pippo" invece di "Ed"
+// * FATTO CON METODO SPLICE E CONTROLLANDO PRESENZA DEL NOME COME DETTO DA SAMUEL
 const nameToRemove = "Ed"
 if (teachers.indexOf(nameToRemove) !== - 1) {
   teachers.splice(teachers.indexOf(nameToRemove), 1);
@@ -53,8 +53,8 @@ console.log("Controllo presenza di Ed", teachers.includes(nameToRemove));
 // e salva il risultato nella variabile isFabioPresent
 // * PER FARLO CON IL FOR COME DETTO DA TIZIANO DICHIARO LA VARIABILE CON UN LET
 // * DEBUG
-// teachers.splice(teachers.indexOf("Fabio"), 1);
-// const isFabioPresent = null;
+// * teachers.splice(teachers.indexOf("Fabio"), 1);
+// * const isFabioPresent = null;
 let isFabioPresent = false;
 for (i = 0; i < teachers.length; i ++) {
   const currentTeacher = teachers[i];
@@ -63,9 +63,9 @@ for (i = 0; i < teachers.length; i ++) {
   }
 }
 console.log("isFabioPresent", isFabioPresent)
-// // * LO RIFACCIO ANCHE CON METODO DEGLI ARRAY COME IN ESERCIZIO PRECEDENTE 
-// // * DEBUG
-// // teachers.splice(teachers.indexOf("Fabio"), 1)
+// * LO RIFACCIO ANCHE CON METODO DEGLI ARRAY COME IN ESERCIZIO PRECEDENTE 
+// * DEBUG
+// * teachers.splice(teachers.indexOf("Fabio"), 1)
 // const isFabioPresent = teachers.includes("Fabio");
 // console.log("isFabioPresent", isFabioPresent);
 
