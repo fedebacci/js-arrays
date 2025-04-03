@@ -39,3 +39,14 @@ for (let i = 0; i < initialString.length; i++) {
     }
 }
 console.info("2) compressedStringWithLetterCount:", compressedStringWithLetterCount);
+
+
+
+
+let newStringFromLetterCount = "";
+for (let i = 0; i < compressedStringWithLetterCount.length; i = i + 2) {
+    const currentLetter = compressedStringWithLetterCount[i];
+    const letterOccurrences = compressedStringWithLetterCount[i + 1];
+    newStringFromLetterCount += currentLetter.repeat(letterOccurrences);
+}
+console.info("3) newStringFromLetterCount:", newStringFromLetterCount);
